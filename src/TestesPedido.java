@@ -1,3 +1,4 @@
+import orcamento.ItemOrcamento;
 import orcamento.Orcamento;
 import pedido.GeraPedido;
 import pedido.GeraPedidoHandler;
@@ -12,7 +13,8 @@ import java.util.Arrays;
 public class TestesPedido {
 
     public static void main(String[] args) {
-        Orcamento orcamento = new Orcamento(new BigDecimal("600"), 4);
+        Orcamento orcamento = new Orcamento();
+        orcamento.adicionarItem(new ItemOrcamento(new BigDecimal("600")));
         String cliente = "Rodrigo";
         BigDecimal valorOrcamento = new BigDecimal("300  ");
         int quantidadeItens = Integer.parseInt("2");
